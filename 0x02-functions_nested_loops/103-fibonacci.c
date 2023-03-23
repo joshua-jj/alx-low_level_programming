@@ -5,25 +5,29 @@
  * followed by a new line
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-	long int i, j, k, next;
+int main(void) {
+    // initialize the first two terms of the Fibonacci sequence
+    int prev = 1;
+    int curr = 2;
 
-	j = 1;
-	k = 2;
-	for (i = 1; i <= 50; ++i)
-	{
-		if (j != 20365011074)
-		{
-			printf("%ld, ", j);
-		}
-		else
-		{
-			printf("%ld\n", j);
-		}
-		next = j + k;
-		j = k;
-		k = next;
-	}
-	return (0);
+    // initialize the sum of even-valued terms
+    int even_sum = 0;
+
+    // loop until the current term exceeds 4 million
+    while (curr <= 4000000) {
+        // check if the current term is even
+        if (curr % 2 == 0) {
+            even_sum += curr;
+        }
+
+        // calculate the next term of the Fibonacci sequence
+        int next = prev + curr;
+        prev = curr;
+        curr = next;
+    }
+
+    // print the sum of even-valued terms
+    printf("%d\n", even_sum);
+
+    return (0);
 }
