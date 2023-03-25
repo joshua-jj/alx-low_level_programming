@@ -2,6 +2,7 @@
 
 /**
  * print_more_numbers - prints 0 - 14 10 times.
+ * Return: void
  */
 void print_more_numbers(void)
 {
