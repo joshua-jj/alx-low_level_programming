@@ -12,9 +12,10 @@ void print_more_numbers(void)
 	{
 		for (j = 0 ; j <= 14 ; j++)
 		{
+			c = j;
 			if (j >= 10)
 			{
-				c = j;
+				c = j % 10;
 				_putchar('1');
 			}
 			_putchar(c + 48);
