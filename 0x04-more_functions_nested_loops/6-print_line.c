@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line: draws straight line
+ * print_line - draws straight line
  * @n: number of times _ should be printed
  */
 void print_line(int n)
